@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+        <key>albums</key>
+        <array>
+            <string>Thank Me Later</string>
+            <string>Take Care</string>
+            <string>Nothing Was The Same</string>
+            <string>Views</string>
+            <string>Scorpion</string>
+            <key>albums</key>
+        </array>
+        <key>name</key>
+        <string>Drake</string>
+    </dict>
+    <dict>
+        <key>albums</key?
+        <array>
+            <string>Loud</string>
+            <string>Rated R</string>
+            <string>Good Girl Gone Bad</string>
+            <string>A Girl Like Me</string>
+        </array>
+    </dict>
+</array>
+</plist>
