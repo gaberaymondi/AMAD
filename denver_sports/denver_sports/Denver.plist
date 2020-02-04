@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Item 1</key>
+	<dict>
+		<key>players</key>
+		<array>
+			<string>Drew Lock</string>
+			<string>Phillip Lindsay</string>
+			<string>Courtland Sutton</string>
+			<string>Noah Fant</string>
+			<string>Justin Simmons</string>
+			<string>Chris Harris Jr.</string>
+			<string>Von Miller</string>
+			<string>Bradley Chubb</string>
+		</array>
+		<key>Team</key>
+		<string>Denver Broncos</string>
+	</dict>
+	<key>Item 0 </key>
+	<dict>
+		<key>players</key>
+		<array>
+			<string>Torrey Craig</string>
+			<string>Jerami Grant</string>
+			<string>Monte Morris</string>
+			<string>Malik Beasley</string>
+			<string>Michael Porter Jr</string>
+			<string>Nikola Jokic</string>
+			<string>Paul Millsap</string>
+			<string>Will Barton</string>
+			<string>Gary Harris</string>
+			<string>Jamal Murray</string>
+		</array>
+		<key>Team</key>
+		<string>Denver Nuggets</string>
+	</dict>
+</dict>
+</plist>
