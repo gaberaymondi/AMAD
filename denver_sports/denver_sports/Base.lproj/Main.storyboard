@@ -17,21 +17,26 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzJ-UV-1fh" userLabel="Team Picker">
                                 <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="gqf-b7-Fif"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="2s9-XY-Ffk"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsE-AK-czV">
                                 <rect key="frame" x="171" y="636" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denver Sports Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jp-c1-Q3Z">
                                 <rect key="frame" x="20.5" y="191" width="373" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QsE-AK-czV" firstAttribute="top" secondItem="uzJ-UV-1fh" secondAttribute="bottom" constant="80" id="3F3-Ee-V1G"/>
                             <constraint firstItem="uzJ-UV-1fh" firstAttribute="top" secondItem="6jp-c1-Q3Z" secondAttribute="bottom" constant="100" id="HCu-qV-84Z"/>
@@ -42,7 +47,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf">
+                        <color key="badgeColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="choiceLabel" destination="QsE-AK-czV" id="VdF-zo-p6Y"/>
                         <outlet property="teamPicker" destination="uzJ-UV-1fh" id="6Mm-ah-pAl"/>
@@ -51,6 +58,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="9yj-oG-aJe">
+            <objects>
+                <viewController id="GfR-LI-VtY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B3I-z0-qnD" customClass="ThirdViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YML-0o-PE8">
+                                <rect key="frame" x="170" y="361.5" width="74" height="173"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-1c-pSf">
+                                        <rect key="frame" x="15" y="0.0" width="44" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playAudio:" destination="HHX-0a-Whf" eventType="touchUpInside" id="4F9-Q4-CqL"/>
+                                            <action selector="playAudio:" destination="B3I-z0-qnD" eventType="touchUpInside" id="pr0-O9-Twa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58M-CY-ptP">
+                                        <rect key="frame" x="12.5" y="66" width="49" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopAudio:" destination="B3I-z0-qnD" eventType="touchUpInside" id="fnU-sb-Kee"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-0b-Cfn">
+                                        <rect key="frame" x="0.0" y="132" width="74" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Record">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordAudio:" destination="B3I-z0-qnD" eventType="touchUpInside" id="KhL-b4-XH6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports Podcast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-U5-cIS">
+                                <rect key="frame" x="73.5" y="212.5" width="267" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YML-0o-PE8" firstAttribute="top" secondItem="5gj-U5-cIS" secondAttribute="bottom" constant="100" id="2aq-Qf-bMh"/>
+                            <constraint firstItem="YML-0o-PE8" firstAttribute="centerX" secondItem="B3I-z0-qnD" secondAttribute="centerX" id="7cC-Ss-t6O"/>
+                            <constraint firstItem="YML-0o-PE8" firstAttribute="centerY" secondItem="B3I-z0-qnD" secondAttribute="centerY" id="8Xv-Y4-dtu"/>
+                            <constraint firstItem="5gj-U5-cIS" firstAttribute="centerX" secondItem="B3I-z0-qnD" secondAttribute="centerX" id="u9i-QX-CEI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dtN-Yh-R5I"/>
+                        <connections>
+                            <outlet property="playAudio" destination="7u7-1c-pSf" id="GsE-vl-NoJ"/>
+                            <outlet property="recordAudio" destination="Y4e-0b-Cfn" id="FhH-jS-rAk"/>
+                            <outlet property="stopAudio" destination="58M-CY-ptP" id="zre-1F-8vh"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="AAL-5f-deQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJw-i7-m07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="HHX-0a-Whf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="686"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -69,7 +148,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QmM-pR-AXP" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="QgE-rC-Gil"/>
                             <constraint firstItem="QmM-pR-AXP" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="ZYR-1C-wH5"/>
@@ -94,6 +174,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="GfR-LI-VtY" kind="relationship" relationship="viewControllers" id="k7q-bt-EeD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

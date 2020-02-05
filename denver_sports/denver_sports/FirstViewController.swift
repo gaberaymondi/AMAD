@@ -80,8 +80,8 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
                 print(error)
             }
             //reload component
-            teamPicker.reloadComponent(teamComp)
-            teamPicker.selectRow(0, inComponent: teamComp, animated: true)
+            teamPicker.reloadComponent(playerComp)
+            teamPicker.selectRow(0, inComponent: playerComp, animated: true)
             
             //get the currently selected indexes artist and album
             let playerIdx = pickerView.selectedRow(inComponent: playerComp)
