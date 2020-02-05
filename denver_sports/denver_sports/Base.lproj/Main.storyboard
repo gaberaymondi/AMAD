@@ -32,11 +32,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denver Sports Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jp-c1-Q3Z">
                                 <rect key="frame" x="20.5" y="191" width="373" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" red="0.19208338859999999" green="0.71378940339999997" blue="0.77783083919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="QsE-AK-czV" firstAttribute="top" secondItem="uzJ-UV-1fh" secondAttribute="bottom" constant="80" id="3F3-Ee-V1G"/>
                             <constraint firstItem="uzJ-UV-1fh" firstAttribute="top" secondItem="6jp-c1-Q3Z" secondAttribute="bottom" constant="100" id="HCu-qV-84Z"/>
@@ -47,9 +47,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf">
-                        <color key="badgeColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="choiceLabel" destination="QsE-AK-czV" id="VdF-zo-p6Y"/>
                         <outlet property="teamPicker" destination="uzJ-UV-1fh" id="6Mm-ah-pAl"/>
@@ -60,76 +58,76 @@
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
         <!--Item-->
-        <scene sceneID="9yj-oG-aJe">
+        <scene sceneID="hDQ-Ot-tqs">
             <objects>
-                <viewController id="GfR-LI-VtY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="B3I-z0-qnD" customClass="ThirdViewController">
+                <viewController id="JGd-ia-5sx" customClass="ThirdViewController" customModule="denver_sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="apg-d5-0cp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YML-0o-PE8">
-                                <rect key="frame" x="170" y="361.5" width="74" height="173"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="L9m-Gl-ceM">
+                                <rect key="frame" x="168.5" y="340" width="77" height="216"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-1c-pSf">
-                                        <rect key="frame" x="15" y="0.0" width="44" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Play">
-                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playAudio:" destination="HHX-0a-Whf" eventType="touchUpInside" id="4F9-Q4-CqL"/>
-                                            <action selector="playAudio:" destination="B3I-z0-qnD" eventType="touchUpInside" id="pr0-O9-Twa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58M-CY-ptP">
-                                        <rect key="frame" x="12.5" y="66" width="49" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Stop">
-                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="stopAudio:" destination="B3I-z0-qnD" eventType="touchUpInside" id="fnU-sb-Kee"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-0b-Cfn">
-                                        <rect key="frame" x="0.0" y="132" width="74" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmn-sO-H5J">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Record">
-                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="titleColor" red="0.19208338859999999" green="0.71378940339999997" blue="0.77783083919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="recordAudio:" destination="B3I-z0-qnD" eventType="touchUpInside" id="KhL-b4-XH6"/>
+                                            <action selector="recordAudio:" destination="JGd-ia-5sx" eventType="touchUpInside" id="SL7-AI-8vC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpD-7O-OV6">
+                                        <rect key="frame" x="15.5" y="87" width="46" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" red="0.19208338859999999" green="0.71378940339999997" blue="0.77783083919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playAudio:" destination="JGd-ia-5sx" eventType="touchUpInside" id="Xv0-ys-8EF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rb-tU-frC">
+                                        <rect key="frame" x="13" y="174" width="51" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" red="0.19208338859999999" green="0.71378940339999997" blue="0.77783083919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopAudio:" destination="JGd-ia-5sx" eventType="touchUpInside" id="aaS-Ip-20g"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports Podcast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-U5-cIS">
-                                <rect key="frame" x="73.5" y="212.5" width="267" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports Podcast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLk-iL-DuU">
+                                <rect key="frame" x="67" y="188.5" width="280" height="51.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="YML-0o-PE8" firstAttribute="top" secondItem="5gj-U5-cIS" secondAttribute="bottom" constant="100" id="2aq-Qf-bMh"/>
-                            <constraint firstItem="YML-0o-PE8" firstAttribute="centerX" secondItem="B3I-z0-qnD" secondAttribute="centerX" id="7cC-Ss-t6O"/>
-                            <constraint firstItem="YML-0o-PE8" firstAttribute="centerY" secondItem="B3I-z0-qnD" secondAttribute="centerY" id="8Xv-Y4-dtu"/>
-                            <constraint firstItem="5gj-U5-cIS" firstAttribute="centerX" secondItem="B3I-z0-qnD" secondAttribute="centerX" id="u9i-QX-CEI"/>
+                            <constraint firstItem="L9m-Gl-ceM" firstAttribute="centerX" secondItem="apg-d5-0cp" secondAttribute="centerX" id="DSd-VI-Yvq"/>
+                            <constraint firstItem="L9m-Gl-ceM" firstAttribute="top" secondItem="bLk-iL-DuU" secondAttribute="bottom" constant="100" id="Soj-nb-r4B"/>
+                            <constraint firstItem="L9m-Gl-ceM" firstAttribute="centerY" secondItem="apg-d5-0cp" secondAttribute="centerY" id="qse-wD-fgE"/>
+                            <constraint firstItem="bLk-iL-DuU" firstAttribute="centerX" secondItem="apg-d5-0cp" secondAttribute="centerX" id="ubV-Iy-oOc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dtN-Yh-R5I"/>
-                        <connections>
-                            <outlet property="playAudio" destination="7u7-1c-pSf" id="GsE-vl-NoJ"/>
-                            <outlet property="recordAudio" destination="Y4e-0b-Cfn" id="FhH-jS-rAk"/>
-                            <outlet property="stopAudio" destination="58M-CY-ptP" id="zre-1F-8vh"/>
-                        </connections>
+                        <viewLayoutGuide key="safeArea" id="wad-5Q-Npk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="AAL-5f-deQ"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="66-microphone" id="1zr-rG-7F2">
+                        <color key="badgeColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="playAudio" destination="xpD-7O-OV6" id="wGv-sf-C4g"/>
+                        <outlet property="recordAudio" destination="hmn-sO-H5J" id="Zpu-HO-a1e"/>
+                        <outlet property="stopAudio" destination="5rb-tU-frC" id="BOq-pU-HMO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tJw-i7-m07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="HHX-0a-Whf" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZm-Iv-6Hp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="686"/>
+            <point key="canvasLocation" x="-282" y="776"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -142,13 +140,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmM-pR-AXP">
                                 <rect key="frame" x="101.5" y="416" width="211" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <state key="normal" title="Live Scores"/>
+                                <state key="normal" title="Live Scores">
+                                    <color key="titleColor" red="0.19208338859999999" green="0.71378940339999997" blue="0.77783083919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="goCheckScores:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="1Sf-1C-p0A"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QmM-pR-AXP" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="QgE-rC-Gil"/>
@@ -170,11 +170,12 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.19208338859999999" green="0.71378940339999997" blue="0.77783083919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="GfR-LI-VtY" kind="relationship" relationship="viewControllers" id="k7q-bt-EeD"/>
+                        <segue destination="JGd-ia-5sx" kind="relationship" relationship="viewControllers" id="oSr-H7-cXC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -183,6 +184,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="66-microphone" width="12" height="24"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

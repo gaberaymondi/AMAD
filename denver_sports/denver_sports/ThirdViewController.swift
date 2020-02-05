@@ -2,104 +2,110 @@
 //  ThirdViewController.swift
 //  denver_sports
 //
-//  Created by Gabe Raymondi on 2/3/20.
+//  Created by Gabe Raymondi on 2/5/20.
 //  Copyright © 2020 Gabe Raymondi. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
-
+class ThirdViewController: UITableViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
+    
     //variables
     let audioSession = AVAudioSession.sharedInstance()
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
-
-    //constant
+    
     let filename = "audio.m4a"
-
-    //connections
+    
+    @IBOutlet weak var recordAudio: UIButton!
     @IBOutlet weak var playAudio: UIButton!
     @IBOutlet weak var stopAudio: UIButton!
-    @IBOutlet weak var recordAudio: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //get path for the audio file
         let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-
         let docDir = dirPath[0]
-        let audioFilePath = docDir.appendingPathComponent(filename)
-        print(audioFilePath)
-
+        let audioFileURL = docDir.appendingPathComponent(filename)
+        print(audioFileURL)
+        
+        //configure our audioSession
         do {
             try audioSession.setCategory(AVAudioSession.Category.playAndRecord, mode: .default, options: .init(rawValue: 1))
         } catch {
-            print(error)
+            print("audio session error: \(error.localizedDescription)")
         }
-
+        
+        //declare our settings in a dictionary
         let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC), //audio codec
-            AVSampleRateKey: 1200, //sample rate hZ
-            AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue //bit rate
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 1200, //sample rate in hZ
+            AVNumberOfChannelsKey: 1, //num of channels
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue //audio bit rate
         ]
-
+        
         do {
-            audioRecorder = try AVAudioRecorder(url: audioFilePath, settings: settings)
+            //create our recorder instance
+            audioRecorder = try AVAudioRecorder(url: audioFileURL, settings: settings)
+            //get it ready for recording by creating the audio file at the specified location
             audioRecorder?.prepareToRecord()
             print("Audio recorder ready!")
         } catch {
-            print(error)
+            print("Audio recorder error: \(error.localizedDescription)")
         }
     }
-
     
     @IBAction func recordAudio(_ sender: Any) {
-        
+        //make sure we have an instance
         if let recorder = audioRecorder {
-            //we have an instance of AudioRecorder
+            //check to make sure we aren't already recording
             if recorder.isRecording == false {
-
+                
                 playAudio.isEnabled = false
                 stopAudio.isEnabled = true
                 recorder.delegate = self
-
+                
                 recorder.record()
             }
         } else {
-            print("no recorder!")
+            print("No audio recorder instance")
         }
     }
-
+    
     @IBAction func playAudio(_ sender: Any) {
+        //make sure we aren't recording
         if audioRecorder?.isRecording == false {
+            
             stopAudio.isEnabled = true
             recordAudio.isEnabled = false
-
+            
             do {
+                
                 try audioPlayer = AVAudioPlayer(contentsOf: (audioRecorder?.url)!)
+                //set to playback mode for optimal volume
                 try audioSession.setCategory(AVAudioSession.Category.playback)
-
                 audioPlayer!.delegate = self
-                audioPlayer!.prepareToPlay()
-                audioPlayer!.play()
+                audioPlayer!.prepareToPlay() //preload audio
+                audioPlayer!.play() //plays audio file
+    
             } catch {
-                print("could not play audio")
+                print("audioPlayer error: \(error.localizedDescription)")
             }
         }
-
+        
+        
     }
-
+    
     @IBAction func stopAudio(_ sender: Any) {
-        //stop recording or playing based on what's happening
         stopAudio.isEnabled = false
         playAudio.isEnabled = true
         recordAudio.isEnabled = true
-
+        
+        //stop recording if that's the current task
         if audioRecorder?.isRecording == true {
             audioRecorder?.stop()
         } else {
@@ -108,21 +114,21 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
             do {
                 try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
             } catch {
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }
-
-    //delegate method for audioPlayer
+    
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         recordAudio.isEnabled = true
         stopAudio.isEnabled = false
-
+        
         do {
             try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
         } catch {
-            print(error)
+            print(error.localizedDescription)
         }
     }
+    
+    
 }
-
