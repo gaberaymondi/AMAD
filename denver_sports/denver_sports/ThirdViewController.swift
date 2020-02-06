@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ThirdViewController: UITableViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
+class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
     //variables
     let audioSession = AVAudioSession.sharedInstance()

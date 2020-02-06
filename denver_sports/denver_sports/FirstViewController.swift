@@ -83,12 +83,12 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             teamPicker.reloadComponent(playerComp)
             teamPicker.selectRow(0, inComponent: playerComp, animated: true)
             
-            //get the currently selected indexes artist and album
-            let playerIdx = pickerView.selectedRow(inComponent: playerComp)
-            let teamIdx = pickerView.selectedRow(inComponent: teamComp)
-            
-            choiceLabel.text = "\(players[playerIdx]) plays for the \(teams[teamIdx])"
         }
+        //get the currently selected indexes artist and album
+        let playerIdx = pickerView.selectedRow(inComponent: playerComp)
+        let teamIdx = pickerView.selectedRow(inComponent: teamComp)
+        
+        choiceLabel.text = "\(players[playerIdx]) plays for the \(teams[teamIdx])"
     }
 
 }

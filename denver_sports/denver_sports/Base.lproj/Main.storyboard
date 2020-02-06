@@ -116,7 +116,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wad-5Q-Npk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="66-microphone" id="1zr-rG-7F2">
+                    <tabBarItem key="tabBarItem" title="Item" image="66-microphone" selectedImage="66-microphone" id="1zr-rG-7F2">
                         <color key="badgeColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </tabBarItem>
                     <connections>
