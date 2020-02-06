@@ -15,14 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzJ-UV-1fh" userLabel="Team Picker">
-                                <rect key="frame" x="47" y="340" width="320" height="216"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="gqf-b7-Fif"/>
-                                    <outlet property="delegate" destination="9pv-A4-QxB" id="2s9-XY-Ffk"/>
-                                </connections>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsE-AK-czV">
                                 <rect key="frame" x="171" y="636" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -35,15 +27,24 @@
                                 <color key="textColor" red="0.19208338859999999" green="0.71378940339999997" blue="0.77783083919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzJ-UV-1fh" userLabel="Team Picker">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="gqf-b7-Fif"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="2s9-XY-Ffk"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QsE-AK-czV" firstAttribute="top" secondItem="uzJ-UV-1fh" secondAttribute="bottom" constant="80" id="3F3-Ee-V1G"/>
-                            <constraint firstItem="uzJ-UV-1fh" firstAttribute="top" secondItem="6jp-c1-Q3Z" secondAttribute="bottom" constant="100" id="HCu-qV-84Z"/>
+                            <constraint firstItem="uzJ-UV-1fh" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Cml-gY-BvW"/>
+                            <constraint firstItem="uzJ-UV-1fh" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="RK3-j0-QJX"/>
+                            <constraint firstItem="QsE-AK-czV" firstAttribute="top" secondItem="uzJ-UV-1fh" secondAttribute="bottom" constant="80" id="Wpm-4V-hLp"/>
                             <constraint firstItem="uzJ-UV-1fh" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="YWD-By-W2d"/>
                             <constraint firstItem="6jp-c1-Q3Z" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="oDK-7a-ONp"/>
                             <constraint firstItem="QsE-AK-czV" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="vE0-9N-FOr"/>
-                            <constraint firstItem="uzJ-UV-1fh" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="vb7-D0-81N"/>
+                            <constraint firstItem="uzJ-UV-1fh" firstAttribute="top" secondItem="6jp-c1-Q3Z" secondAttribute="bottom" constant="100" id="x10-9A-pR6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -55,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
         <!--Item-->
         <scene sceneID="hDQ-Ot-tqs">
