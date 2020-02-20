@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>team</key>
+		<string>Panthers</string>
+		<key>players</key>
+		<array>
+			<string>Casper Ware</string>
+			<string>Kevin Durant</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>BB4L</string>
+		<key>players</key>
+		<array>
+			<string>Raymond Lewis</string>
+			<string>Bobby Brown</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>Optimus</string>
+		<key>players</key>
+		<array>
+			<string>Dorell Wright</string>
+			<string>JaVale McGee</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>Black Pearl Elite</string>
+		<key>players</key>
+		<array>
+			<string>Kobe Bryant</string>
+			<string>James Harden</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>Public Enemy</string>
+		<key>players</key>
+		<array>
+			<string>Kenny Brunner</string>
+			<string>LeBron James</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>Young Citi</string>
+		<key>players</key>
+		<array>
+			<string>Nick Young</string>
+			<string>Demar DeRozen</string>
+		</array>
+	</dict>
+	<dict>
+		<key>team</key>
+		<string>L.O.S</string>
+		<key>players</key>
+		<array>
+			<string>Greg Anthony</string>
+			<string>Lamelo Ball</string>
+		</array>
+	</dict>
+</array>
+</plist>
