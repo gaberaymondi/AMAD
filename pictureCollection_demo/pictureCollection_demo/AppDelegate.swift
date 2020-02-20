@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  countries_demo
+//  pictureCollection_demo
 //
-//  Created by Isaac Sheets on 2/6/20.
-//  Copyright © 2020 Isaac Sheets. All rights reserved.
+//  Created by Gabe Raymondi on 2/18/20.
+//  Copyright © 2020 Gabe Raymondi. All rights reserved.
 //
 
 import UIKit
@@ -31,5 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+
+
 }
 

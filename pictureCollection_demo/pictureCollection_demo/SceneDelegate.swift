@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  countries_demo
+//  pictureCollection_demo
 //
-//  Created by Isaac Sheets on 2/6/20.
-//  Copyright © 2020 Isaac Sheets. All rights reserved.
+//  Created by Gabe Raymondi on 2/18/20.
+//  Copyright © 2020 Gabe Raymondi. All rights reserved.
 //
 
 import UIKit
