@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01275D224198CAD00094B2F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01275D124198CAD00094B2F /* MapViewController.swift */; };
 		D08673802416F5D70035924D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D086737F2416F5D70035924D /* AppDelegate.swift */; };
 		D08673822416F5D70035924D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08673812416F5D70035924D /* SceneDelegate.swift */; };
 		D08673842416F5D70035924D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08673832416F5D70035924D /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D01275D124198CAD00094B2F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D086737C2416F5D70035924D /* minerals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minerals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D086737F2416F5D70035924D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D08673812416F5D70035924D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		D086737E2416F5D70035924D /* minerals */ = {
 			isa = PBXGroup;
 			children = (
+				D01275D124198CAD00094B2F /* MapViewController.swift */,
 				D086737F2416F5D70035924D /* AppDelegate.swift */,
 				D08673812416F5D70035924D /* SceneDelegate.swift */,
 				D08673832416F5D70035924D /* ViewController.swift */,
@@ -160,6 +163,7 @@
 				D08673842416F5D70035924D /* ViewController.swift in Sources */,
 				D08673802416F5D70035924D /* AppDelegate.swift in Sources */,
 				D08673822416F5D70035924D /* SceneDelegate.swift in Sources */,
+				D01275D224198CAD00094B2F /* MapViewController.swift in Sources */,
 				D08673942416F7BD0035924D /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

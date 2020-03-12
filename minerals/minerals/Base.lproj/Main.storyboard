@@ -7,22 +7,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="veA-mJ-0Rj">
             <objects>
-                <viewController id="qSj-hb-ZE3" sceneMemberID="viewController">
+                <viewController id="qSj-hb-ZE3" customClass="MapViewController" customModule="minerals" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tRz-a4-FxR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SiQ-AS-Jx7">
-                                <rect key="frame" x="20" y="64" width="374" height="798"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SiQ-AS-Jx7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qSj-hb-ZE3" id="AJt-kR-6UH"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SiQ-AS-Jx7" firstAttribute="trailing" secondItem="FjH-XU-tp5" secondAttribute="trailing" id="1xo-8W-vZC"/>
+                            <constraint firstItem="SiQ-AS-Jx7" firstAttribute="top" secondItem="tRz-a4-FxR" secondAttribute="top" constant="44" id="MWW-IX-NnU"/>
+                            <constraint firstAttribute="bottom" secondItem="SiQ-AS-Jx7" secondAttribute="bottom" id="YZr-pB-aNf"/>
+                            <constraint firstItem="SiQ-AS-Jx7" firstAttribute="leading" secondItem="tRz-a4-FxR" secondAttribute="leading" id="jMj-fc-4Q0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FjH-XU-tp5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XgG-4e-nX6"/>
+                    <connections>
+                        <outlet property="map" destination="SiQ-AS-Jx7" id="xfo-rC-5A2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsO-Vj-kie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,7 +43,7 @@
         <!--Detail-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="minerals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="minerals" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +71,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="dbu-JF-DOE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Duo-6A-6x1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Duo-6A-6x1">
+                            <connections>
+                                <action selector="openCamera:" destination="BYZ-38-t0r" id="bAG-ie-0H4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="infoLabel" destination="Ogg-Hn-sFw" id="ZmO-3c-tPC"/>
@@ -80,11 +96,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="mineralCell" id="Wyh-AV-WKd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mineralCell" id="Wyh-AV-WKd">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wyh-AV-WKd" id="74Y-y7-opQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="351" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -95,7 +111,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Minerals" id="aVu-8b-stv">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Icon-20" id="s5a-J2-Xxr"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Icon-20" id="s5a-J2-Xxr">
+                            <connections>
+                                <segue destination="qSj-hb-ZE3" kind="show" id="PF6-JB-KYN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="segue" id="z7w-zS-flD"/>
